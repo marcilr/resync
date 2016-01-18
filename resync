@@ -1,0 +1,63 @@
+#!/usr/bin/python
+# resync
+# Created Fri Jan 15 15:35:35 AKST 2016
+# Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
+#
+
+import os.path
+
+# -------------------------------------------
+# Configuration
+# -------------------------------------------
+DEBUG = "true";
+#DEBUG = "false";
+
+# Manifest files to check for
+manifest = "manifest"
+manifest_home = "~/.manifest"
+
+# -------------------------------------------
+# Functions
+# -------------------------------------------
+
+#
+# debug()
+# str - String to print for DEBUG == 'true'
+#
+def debug( str ):
+  if DEBUG == 'true':
+      print str
+  return
+
+def printme( str ):
+   "This prints a passed string into this function"
+   print str
+   return
+
+def loop_over_manifest():
+    debug("Looping over manifest...")
+    with open(manifest,'r') as file:
+        for line in file:
+            # Remove end whitespace
+            line = line.rstrip()
+            source, target == line.split()
+            if not line: continue
+    debug("Closing manifest")
+    file.close
+    debug("Manifest closed")
+    return
+
+
+# -------------------------------------------
+# Main
+# -------------------------------------------
+
+#print "Hello World!"
+#printme("I'm first call to user defined function!")
+
+loop_over_manifest()
+
+if os.path.isfile(manifest):
+    loop_over_manifest
+else:
+    print "No manifest found"
