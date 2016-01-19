@@ -69,8 +69,7 @@ def loop_over_manifest(manifest):
                 user = manifest_list[1]
 
             if manifest_list[0] == "password":
-                debug("loop_over_manifest() %s = %s "
-                      % (manifest_list[0], manifest_list[1]))
+                debug("loop_over_manifest() %s = *** " % manifest_list[0])
                 password = manifest_list[1]
 
         else:
@@ -109,7 +108,14 @@ def get_manifest():
 # -------------------------------------------
 # Main
 # -------------------------------------------
+user = ""
+password = ""
 
 get_manifest()
 
-#loop_over_manifest()
+if user != '': 
+    debug("main() user = %s" % user)
+
+if password != '':
+    debug("main() password = ***")
+
