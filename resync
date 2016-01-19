@@ -114,8 +114,10 @@ password = ""
 
 get_manifest()
 
+# Report username from manifest
 if username != '': 
     debug("main() username = %s" % username)
 
+# Report password from manifest
 if password != '':
     debug("main() password = ***")
