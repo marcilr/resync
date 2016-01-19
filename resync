@@ -53,9 +53,16 @@ def loop_over_manifest(manifest):
 
         # Check if line (not blank) and not comment
         if line and not line.startswith("#"):    
+
             debug("loop_over_manifest() line: %s" % line)
-            print "split: " % line.split()
-           
+
+            # Split line to list
+            manifest_list = line.split()
+
+            debug("loop_over_manifest() split line:")
+            for str in manifest_list:
+                print str
+
         else:
             debug("loop_over_manifest() skipping blank line or comment")
 
