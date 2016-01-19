@@ -45,6 +45,9 @@ def error( str ):
 
 
 def loop_over_manifest(manifest):
+    global user
+    global password
+
     debug("loop_over_manifest() Looping...")
 
     for line in open(manifest, 'r'):
@@ -52,7 +55,7 @@ def loop_over_manifest(manifest):
         line = line.rstrip()
 
         # Check if line (not blank) and not comment
-        if line and not line.startswith('#'):    
+        if line and not line.startswith('#'):
 
             debug("loop_over_manifest() line: %s" % line)
 
@@ -63,6 +66,12 @@ def loop_over_manifest(manifest):
             if manifest_list[0] == "user":
                 debug("loop_over_manifest() %s = %s "
                       % (manifest_list[0], manifest_list[1]))
+                user = manifest_list[1]
+
+            if manifest_list[0] == "password":
+                debug("loop_over_manifest() %s = %s "
+                      % (manifest_list[0], manifest_list[1]))
+                password = manifest_list[1]
 
         else:
             debug("loop_over_manifest() skipping blank line or comment")
