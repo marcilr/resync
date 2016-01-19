@@ -47,20 +47,6 @@ def error( str ):
 def loop_over_manifest(manifest):
     debug("loop_over_manifest() Looping...")
 
-# To alleviate:
-# loop_over_manifest() line: # .manifest
-# Traceback (most recent call last):
-#   File "./resync", line 100, in <module>
-#     get_manifest()
-#   File "./resync", line 88, in get_manifest
-#     loop_over_manifest(manifest)
-#   File "./resync", line 68, in loop_over_manifest
-#     source, target == line.split()
-# NameError: global name 'source' is not defined
-
-
-    global source
-
     for line in open(manifest, 'r'):
         # Remove end whitespace
         line = line.rstrip()
