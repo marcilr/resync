@@ -1,0 +1,21 @@
+TODO
+Created Tue Jan 19 08:17:23 AKST 2016
+Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+
++++ Tue Jan 19 08:17:23 AKST 2016 - Parse ~/.manifest options than 
+suppercede with options from manifest file in current working directory
+as needed.
+
++++ Tue Jan 19 08:17:23 AKST 2016 - Support specifying default user/pass
+on ~/.manifest file and manifest file in current working directory.
+
++++ Tue Jan 19 08:17:23 AKST 2016 - Support comma separate user and pass
+at end of each manifest line to specify credentials for specified git repo.
+
++++ Tue Jan 19 08:17:23 AKST 2016 - Add parsing for - and -- command line
+arguments.
+
++++ Tue Jan 19 08:17:23 AKST 2016 - Add support for specifying location of 
+manifest with -m or --manifest options.
