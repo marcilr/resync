@@ -74,15 +74,17 @@ def loop_over_manifest(manifest):
             manifest_list = line.split()
             debug("loop_over_manifest() split line:")
 
+            src = manifest_list[0]
+            tar = manifest_list[1]
+
             # Record username id found
-            if manifest_list[0] == "username":
-                debug("loop_over_manifest() %s = %s "
-                      % (manifest_list[0], manifest_list[1]))
-                username = manifest_list[1]
+            if src == "username":
+                debug("loop_over_manifest() %s = %s " % (src, tar))
+                username = src
 
             if manifest_list[0] == "password":
-                debug("loop_over_manifest() %s = *** " % manifest_list[0])
-                password = manifest_list[1]
+                debug("loop_over_manifest() %s = *** " % src)
+                password = tar
 
         else:
             debug("loop_over_manifest() skipping blank line or comment")
