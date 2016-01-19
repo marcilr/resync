@@ -51,13 +51,17 @@ def loop_over_manifest(manifest):
         # Remove end whitespace
         line = line.rstrip()
 
-        if not line.startswith("#"):    
+        # Check if line (not blank) and not comment
+        if line and not line.startswith("#"):    
             debug("loop_over_manifest() line: %s" % line)
-            print line.split()
+            print "split: " % line.split()
+           
         else:
-            debug("loop_over_manifest() skipping commment")
+            debug("loop_over_manifest() skipping blank line or comment")
 
         if not line: continue
+ 
+
     debug("loop_over_manifest() closing: %s" % manifest)
     file.close
     debug("loop_over_manifest() close: %s" % manifest)
