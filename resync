@@ -107,13 +107,13 @@ def get_manifest():
     debug( "get_manifest() processing: "
         + str(len(manifests)) + ' manifests')
 
-    for idx, manifest in enumerate(manifests):
-        if os.path.isfile(manifest):
-            message = "get_manifest() %d, %s" % (idx, manifest)
+    for idx, file in enumerate(manifests):
+        if os.path.isfile(file):
+            message = "get_manifest() %d, %s" % (idx, file)
             debug(message)
-            loop_over_manifest(manifest)
+            loop_over_manifest(file)
         else:
-            message = "get_manifest() No %s found, aborting." % manifest
+            message = "get_manifest() No %s found, aborting." % file
             error(message)
      
     return
