@@ -40,15 +40,6 @@ def error( str ):
    return
 
 
-# 
-# printme()
-# str - String to print
-#
-def printme( str ):
-   "This prints a passed string into this function"
-   print str
-   return
-
 
 #
 # get_manifest()
