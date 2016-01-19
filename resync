@@ -52,7 +52,7 @@ def loop_over_manifest(manifest):
         line = line.rstrip()
 
         # Check if line (not blank) and not comment
-        if line and not line.startswith("#"):    
+        if line and not line.startswith('#'):    
 
             debug("loop_over_manifest() line: %s" % line)
 
