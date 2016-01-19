@@ -55,13 +55,14 @@ def error( str ):
 # username - Global variable set with username if found
 # password - global variable set with password if found
 #
-def loop_over_manifest(manifest):
+def loop_over_manifest(manifest_file):
+    global manifest
     global username
     global password
 
     debug("loop_over_manifest() Looping...")
 
-    for line in open(manifest, 'r'):
+    for line in open(manifest_file, 'r'):
         # Remove end whitespace
         line = line.rstrip()
 
@@ -82,21 +83,24 @@ def loop_over_manifest(manifest):
                 debug("loop_over_manifest() %s = %s " % (src, tar))
                 username = src
 
-            if manifest_list[0] == "password":
+            elif manifest_list[0] == "password":
                 debug("loop_over_manifest() %s = *** " % src)
                 password = tar
 
+            else:
+                new = [src,tar]
+                manifest.append(new)
+           
         else:
             debug("loop_over_manifest() skipping blank line or comment")
 
         if not line: continue
  
+    #debug("loop_over_manifest() closing: %s" % file)
+    #file.close
+    #debug("loop_over_manifest() close: %s" % file)
 
-    debug("loop_over_manifest() closing: %s" % manifest)
-    file.close
-    debug("loop_over_manifest() close: %s" % manifest)
-
-    return
+    return manifest
 
 
 #
@@ -122,6 +126,7 @@ def get_manifest():
 # -------------------------------------------
 # Main
 # -------------------------------------------
+manifest = []
 username = ""
 password = ""
 
