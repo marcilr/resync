@@ -143,3 +143,13 @@ if password != '':
 # Report manifest array length
 debug("main() manifest array length: %d" % len(manifest))
 
+# Loop over repos in manifest array
+for repo in manifest:
+    debug("repo")
+    debug("  src: %s" % repo[0])
+    debug("  tar: %s" % repo[1])
+
+# If the repo does not exist check it out
+
+# If the repo does exist than update it
+
