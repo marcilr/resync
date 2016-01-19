@@ -44,6 +44,19 @@ def error( str ):
    return
 
 
+def loop_over_manifest():
+    debug("Looping over manifest...")
+    with open(manifest,'r') as file:
+        for line in file:
+            # Remove end whitespace
+            line = line.rstrip()
+            source, target == line.split()
+            if not line: continue
+    debug("Closing manifest")
+    file.close
+    debug("Manifest closed")
+    return
+
 
 #
 # get_manifest()
@@ -60,19 +73,6 @@ def get_manifest():
             message = "No %s found, aborting." % file
             error(message)
      
-    return
-
-def loop_over_manifest():
-    debug("Looping over manifest...")
-    with open(manifest,'r') as file:
-        for line in file:
-            # Remove end whitespace
-            line = line.rstrip()
-            source, target == line.split()
-            if not line: continue
-    debug("Closing manifest")
-    file.close
-    debug("Manifest closed")
     return
 
 
