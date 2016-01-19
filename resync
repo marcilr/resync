@@ -64,12 +64,18 @@ def loop_over_manifest(manifest):
     for line in open(manifest, 'r'):
         # Remove end whitespace
         line = line.rstrip()
-        debug("loop_over_manifest() line: %s" % line)
-        print line.split()
+
+        if not line.startswith("#"):    
+            debug("loop_over_manifest() line: %s" % line)
+            print line.split()
+        else:
+            debug("loop_over_manifest() skipping commment")
+
         if not line: continue
-    debug("loop_over_manifest() Closing manifest")
+    debug("loop_over_manifest() closing: %s" % manifest)
     file.close
-    debug("loop_over_manifest() Closed manifest")
+    debug("loop_over_manifest() close: %s" % manifest)
+
     return
 
 
