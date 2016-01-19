@@ -8,6 +8,9 @@ Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
 suppercede with options from manifest file in current working directory
 as needed.
 
++++ Tue Jan 19 08:17:23 AKST 2016 - Remove /home/marcilr from ~/.manifest
+path.  Script should do a whoami or whatevert the python equivilent is.
+
 +++ Tue Jan 19 08:17:23 AKST 2016 - Support specifying default user/pass
 on ~/.manifest file and manifest file in current working directory.
 
