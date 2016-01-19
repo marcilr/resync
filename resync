@@ -6,6 +6,9 @@
 
 import os.path
 
+# Used by sys.exit() to exit with error.
+import sys
+
 # -------------------------------------------
 # Configuration
 # -------------------------------------------
@@ -13,8 +16,8 @@ DEBUG = "true";
 #DEBUG = "false";
 
 # Manifest files to check for
-manifest = "manifest"
-manifest_home = "~/.manifest"
+manifest_file = "manifest"
+manifest_file_home = "~/.manifest"
 
 # -------------------------------------------
 # Functions
@@ -29,6 +32,14 @@ def debug( str ):
       print str
   return
 
+# error()
+# str - String with error message to print
+#
+def error( str ):
+   sys.exit(str)
+   return
+
+
 # 
 # printme()
 # str - String to print
@@ -37,6 +48,21 @@ def printme( str ):
    "This prints a passed string into this function"
    print str
    return
+
+
+#
+# get_manifest()
+# Get manifest from "manifest" in working directory
+# or ~/.manifest in home directory.
+#
+def get_manifest():
+    if os.path.isfile(manifest_file):
+        print "Found ./manifest"
+    elif os.path.isfile(manifest_file_home):
+        print "Found ~/.manifest"
+    else:
+        error("No ./manifest or ~/.manifest found, aborting.")
+    return
 
 def loop_over_manifest():
     debug("Looping over manifest...")
@@ -56,12 +82,6 @@ def loop_over_manifest():
 # Main
 # -------------------------------------------
 
-#print "Hello World!"
-#printme("I'm first call to user defined function!")
+get_manifest()
 
-loop_over_manifest()
-
-if os.path.isfile(manifest):
-    loop_over_manifest
-else:
-    print "No manifest found"
+#loop_over_manifest()
