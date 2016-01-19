@@ -17,7 +17,7 @@ DEBUG = "true";
 
 # Manifest files to check for
 manifest_file = "manifest"
-manifest_file_home = "~/.manifest"
+manifest_file_home = "/home/marcilr/.manifest"
 
 # -------------------------------------------
 # Functions
@@ -48,9 +48,9 @@ def error( str ):
 #
 def get_manifest():
     if os.path.isfile(manifest_file):
-        print "Found ./manifest"
+        print "Found %s" % manifest_file
     elif os.path.isfile(manifest_file_home):
-        print "Found ~/.manifest"
+        print "Found %s" % manifest_file_home
     else:
         error("No ./manifest or ~/.manifest found, aborting.")
     return
