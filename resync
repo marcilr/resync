@@ -134,7 +134,11 @@ def process_manifest():
 
   # If the repo does not exist check it out
 
+  #
   # If the repo does exist than update it
+  # Updated command is git pull
+  # Alleviate conflicts (to be resolved) with git stash
+  #
 
   return
 
@@ -146,14 +150,8 @@ manifest = []
 username = ""
 password = ""
 
+# Get manifest from ~/.manifest and manifest in working directory
 get_manifest()
 
-# Report username from manifest
-if username != '': 
-    debug("main() username = %s" % username)
-
-# Report password from manifest
-if password != '':
-    debug("main() password = ***")
-
+# Process manifest array
 process_manifest()
