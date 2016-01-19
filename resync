@@ -20,7 +20,7 @@ DEBUG = "true";
 # List of manifests to check for configuration
 # and manifests to clone sync.
 #
-manifests = ['manifest', '/home/marcilr/.manifest' ]
+manifests = ['/home/marcilr/.manifest','manifest' ]
 
 
 # -------------------------------------------
@@ -45,7 +45,7 @@ def error( str ):
 
 
 def loop_over_manifest(manifest):
-    global user
+    global username
     global password
 
     debug("loop_over_manifest() Looping...")
@@ -63,10 +63,11 @@ def loop_over_manifest(manifest):
             manifest_list = line.split()
             debug("loop_over_manifest() split line:")
 
-            if manifest_list[0] == "user":
+            # Record username id found
+            if manifest_list[0] == "username":
                 debug("loop_over_manifest() %s = %s "
                       % (manifest_list[0], manifest_list[1]))
-                user = manifest_list[1]
+                username = manifest_list[1]
 
             if manifest_list[0] == "password":
                 debug("loop_over_manifest() %s = *** " % manifest_list[0])
@@ -108,14 +109,13 @@ def get_manifest():
 # -------------------------------------------
 # Main
 # -------------------------------------------
-user = ""
+username = ""
 password = ""
 
 get_manifest()
 
-if user != '': 
-    debug("main() user = %s" % user)
+if username != '': 
+    debug("main() username = %s" % username)
 
 if password != '':
     debug("main() password = ***")
-
