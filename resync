@@ -15,9 +15,13 @@ import sys
 DEBUG = "true";
 #DEBUG = "false";
 
+
+manifests = ['manifest', '/home/marcilr/.manifest' ]
+
 # Manifest files to check for
-manifest_file = "manifest"
-manifest_file_home = "/home/marcilr/.manifest"
+#manifest_file = "manifest"
+#manifest_file_home = "/home/marcilr/.manifest"
+
 
 # -------------------------------------------
 # Functions
@@ -43,16 +47,19 @@ def error( str ):
 
 #
 # get_manifest()
-# Get manifest from "manifest" in working directory
-# or ~/.manifest in home directory.
+# Get manifest from the manifests list of manifests.
 #
 def get_manifest():
-    if os.path.isfile(manifest_file):
-        print "Found %s" % manifest_file
-    elif os.path.isfile(manifest_file_home):
-        print "Found %s" % manifest_file_home
-    else:
-        error("No ./manifest or ~/.manifest found, aborting.")
+    debug( "get_manifest() processing: "
+        + str(len(manifests)) + ' manifests')
+
+    for idx, file in enumerate(manifests):
+        if os.path.isfile(file):
+            print "get_manifest() %d, %s" % (idx, file)
+        else:
+            message = "No %s found, aborting." % file
+            error(message)
+     
     return
 
 def loop_over_manifest():
