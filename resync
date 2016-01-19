@@ -139,3 +139,7 @@ if username != '':
 # Report password from manifest
 if password != '':
     debug("main() password = ***")
+
+# Report manifest array length
+debug("main() manifest array length: %d" % len(manifest))
+
