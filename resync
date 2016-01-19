@@ -43,7 +43,12 @@ def error( str ):
    sys.exit(str)
    return
 
-
+#
+# loop_over_manifest()
+# manifest - Path to manifest files to process
+# username - Global variable set with username if found
+# password - global variable set with password if found
+#
 def loop_over_manifest(manifest):
     global username
     global password
