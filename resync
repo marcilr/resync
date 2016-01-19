@@ -44,7 +44,7 @@ def error( str ):
    return
 
 
-def loop_over_manifest():
+def loop_over_manifest(manifest):
     debug("Looping over manifest...")
     with open(manifest,'r') as file:
         for line in file:
