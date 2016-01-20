@@ -173,7 +173,7 @@ def process_manifest():
         # Alleviate conflicts (to be resolved) with git stash
         #
         if os.path.exists(tar):
-            debug("process_manifest() %s exists already, updating..." %tar)
+            debug("process_manifest() %s repo found, updating..." %tar)
             debug("process_manifest() executing: git -C %s" % tar)
 
             #
@@ -183,7 +183,7 @@ def process_manifest():
             from subprocess import call
             call([git, "-C", tar, "pull"])
  
-            debug("process_manifest() updated: %s" % tar)
+            debug("process_manifest() updated %s repo" % tar)
 
         #
         # If repo does not exist clone it.
