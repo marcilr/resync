@@ -124,10 +124,6 @@ def loop_over_manifest(manifest_file):
 
         if not line: continue
  
-    #debug("loop_over_manifest() closing: %s" % file)
-    #file.close
-    #debug("loop_over_manifest() close: %s" % file)
-
     return manifest
 
 
