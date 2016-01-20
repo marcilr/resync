@@ -165,9 +165,8 @@ def process_manifest():
         src = repo[0]
         tar = repo[1]
 
-        debug("process_manifest() repo")
-        debug("process_manifest()     src: %s" % src)
-        debug("process_manifest()     tar: %s" % tar)
+        debug("process_manifest() src repo: %s" % src)
+        debug("process_manifest() tar repo: %s" % tar)
 
         #
         # If the repo does exists than update it with pull
