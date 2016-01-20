@@ -151,30 +151,8 @@ def get_manifest():
     return
 
 #
-# git()
-# Define subprocess for easy git calls.
+# process_manifest()
 #
-# examples
-# git("status")
-# git("clone", "git://git.xyz.com/platform/manifest.git", "-b", "jb_2.5")
-#
-# Changing it to subprocess.check_output allows you to see the output git
-# prints, instead of determining success (e.g. git("status") raises an
-# exception if you're not in a git repo).
-#
-# Running Git clone command in Python
-# http://stackoverflow.com/questions/15079442/running-git-clone-command-in-python
-#
-#
-# "IF it's used heavily in the code you want to run but that code doesn't have
-# to be maintained long-term (or you need a quick fix irrespective of
-# potential maintenance headaches in the future) then you could duck punch
-# (aka monkey patch) it in wherever subprocess is imported...
-# http://stackoverflow.com/questions/4814970/subprocess-check-output-doesnt-seem-to-exist-python-2-6-5/13160748#13160748
-#
-def git(*args):
-    return subprocess.check_call([git] + list(args))
-
 def process_manifest():
 
     # Report manifest array length
@@ -233,7 +211,7 @@ def process_manifest():
             
             # This works:
             #call(["/usr/bin/git", "clone", "ssh://git@github.com/marcilr/git-github.git", "github"])
-            call(["/usr/bin/git", "clone", src, tar])
+            call([git, "clone", src, tar])
 
     return
 
