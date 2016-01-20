@@ -153,6 +153,12 @@ def get_manifest():
 #
 # process_manifest()
 #
+# Progress manifest array of manifests.
+# Uses ssh with crypto keys to alleviate password issues with https.
+#
+# Uses:
+#   manifest - array of repos to sync
+#
 def process_manifest():
 
     # Report manifest array length
@@ -172,9 +178,17 @@ def process_manifest():
         # Alleviate conflicts (to be resolved) with git stash
         #
         if os.path.exists(tar):
-            debug("process_manifest() %s exists already" %tar)
+            debug("process_manifest() %s exists already, updating..." %tar)
+            debug("process_manifest() executing: git -C %s" % tar)
 
-
+            #
+            # Calling an external command in Python
+            # http://stackoverflow.com/questions/89228/calling-an-external-command-in-python
+            #
+            from subprocess import call
+            call([git, "-C", tar, "pull"])
+ 
+            debug("process_manifest() updated: %s" % tar)
 
         #
         # If repo does not exist clone it.
@@ -198,7 +212,7 @@ def process_manifest():
         #       authentication. 
         #
         else:   
-            debug("process_manifest() %s repo not found" % tar);
+            debug("process_manifest() %s repo not found, cloning..." % tar);
 
             debug("process_manifest() executing: ")
             debug("  git clone ssh://git@github.com/marcilr/git-github.git github")
