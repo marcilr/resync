@@ -4,6 +4,6 @@
 #
 # Manifest for resync application
 #
-ssh://git@github.com/marcilr/git-github.git github
-ssh://git@github.com/marcilr/git-syntax syntax
+ssh://git@github.com/marcilr/github.git github
+ssh://git@github.com/marcilr/syntax syntax
 
