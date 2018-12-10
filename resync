@@ -232,7 +232,7 @@ manifest = []
 username = ""
 password = ""
 
-# Get manifest from ~/.manifest and manifest in working directory
+# Get manifest from manifest in working directory
 get_manifest()
 
 # Process manifest array
