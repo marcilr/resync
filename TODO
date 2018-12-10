@@ -16,6 +16,12 @@ Bash: Argument Parsing
 Drew Stokes - Mar 24, 2015
 https://medium.com/@Drew_Stokes/bash-argument-parsing-54f3b81a6a8f
 
+Advanced Bash-Scripting Guide
+An in-depth exploration of the art of shell scripting
+Mendel Cooper - 10 Mar 2014
+http://www.tldp.org/LDP/abs/html/
+
+
 +++ Tue Jan 19 08:17:23 AKST 2016 - Add support for specifying location of 
 manifest with -m or --manifest options.
 
