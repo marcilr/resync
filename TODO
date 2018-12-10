@@ -9,6 +9,15 @@ i.e. Support sub-manifest files.
 +++ Tue Jan 19 08:17:23 AKST 2016 - Remove /home/marcilr from ~/.manifest
 path.  Script should do a whoami or whatevert the python equivilent is.
 
+
+Removed /home/marcilr/.manifest from manifest list:
+#
+# List of manifests to check for configuration
+# and manifests to clone sync.
+#
+manifests = ['manifest' ]
+
+
 +++ Tue Jan 19 08:17:23 AKST 2016 - Support comma separate user and pass
 at end of each manifest line to specify credentials for specified git repo.
 
