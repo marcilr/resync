@@ -48,7 +48,7 @@ DEBUG = "true";
 # List of manifests to check for configuration
 # and manifests to clone sync.
 #
-manifests = ['/home/marcilr/.manifest','manifest' ]
+manifests = ['manifest' ]
 
 
 # -------------------------------------------
