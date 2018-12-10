@@ -48,7 +48,18 @@ DEBUG = "true";
 # List of manifests to check for configuration
 # and manifests to clone sync.
 #
+<<<<<<< HEAD
 manifests = ['manifest' ]
+=======
+# NOTE: Removed /home/marcilr/.manifest that did
+#       not exist on the SOA DOA DNR windows 10
+#       workstation with home directory of
+#       C:\Users\remarcil  Should update script
+#       ignore missing manifest entries.
+#
+manifests = ['manifest']
+
+>>>>>>> d8874a70cd1563be8934ed07e33f978bddfe7300
 
 
 # -------------------------------------------

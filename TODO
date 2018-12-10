@@ -6,6 +6,12 @@ Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
 +++ Thu, Nov 29, 2018  7:47:43 AM - Add recursive support to resync.
 i.e. Support sub-manifest files.
 
++++ Thu, Nov 29, 2018  7:40:39 AM - Removed /home/marcilr/.manifest
+from manifests list that did not exist on the SOA DOA DNR windows 10
+workstation with home directory of C:\Users\remarcil
+
+Should update script ignore missing manifest entries.
+
 +++ Tue Jan 19 08:17:23 AKST 2016 - Remove /home/marcilr from ~/.manifest
 path.  Script should do a whoami or whatevert the python equivilent is.
 
