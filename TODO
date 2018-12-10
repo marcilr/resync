@@ -12,6 +12,10 @@ at end of each manifest line to specify credentials for specified git repo.
 +++ Tue Jan 19 08:17:23 AKST 2016 - Add parsing for - and -- command line
 arguments.
 
+Bash: Argument Parsing
+Drew Stokes - Mar 24, 2015
+https://medium.com/@Drew_Stokes/bash-argument-parsing-54f3b81a6a8f
+
 +++ Tue Jan 19 08:17:23 AKST 2016 - Add support for specifying location of 
 manifest with -m or --manifest options.
 
