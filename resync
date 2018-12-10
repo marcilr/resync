@@ -12,6 +12,7 @@
 # git config user.email
 # marcilr@gmail.com
 #
+#
 # Links
 # =====
 # Calling an external command in Python
@@ -75,6 +76,7 @@ def debug( str ):
       print str
   return
 
+#
 # error()
 # str - String with error message to print
 #
@@ -178,7 +180,7 @@ def process_manifest():
         # Alleviate conflicts (to be resolved) with git stash
         #
         if os.path.exists(tar):
-            debug("process_manifest() %s repo found, updating..." %tar)
+            debug("process_manifest() %s repo found, updating..." % tar)
             debug("process_manifest() executing: git -C %s" % tar)
 
             #
@@ -215,7 +217,7 @@ def process_manifest():
             debug("process_manifest() %s repo not found, cloning..." % tar);
 
             debug("process_manifest() executing: ")
-            debug("  git clone ssh://git@github.com/marcilr/git-github.git github")
+            debug("  git clone %s %s" % (src, tar));
 
             #
             # Calling an external command in Python
