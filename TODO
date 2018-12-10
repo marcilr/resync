@@ -12,17 +12,6 @@ workstation with home directory of C:\Users\remarcil
 
 Should update script ignore missing manifest entries.
 
-+++ Tue Jan 19 08:17:23 AKST 2016 - Remove /home/marcilr from ~/.manifest
-path.  Script should do a whoami or whatevert the python equivilent is.
-
-
-Removed /home/marcilr/.manifest from manifest list:
-#
-# List of manifests to check for configuration
-# and manifests to clone sync.
-#
-manifests = ['manifest' ]
-
 
 +++ Tue Jan 19 08:17:23 AKST 2016 - Support comma separate user and pass
 at end of each manifest line to specify credentials for specified git repo.
@@ -36,6 +25,19 @@ manifest with -m or --manifest options.
 
 Complete
 ========
+x Tue Jan 19 08:17:23 AKST 2016 - Remove /home/marcilr from ~/.manifest
+path.  Script should do a whoami or whatevert the python equivilent is.
+
+
+Mon Dec 10 14:16:45 AKST 2018 - Removed /home/marcilr/.manifest from
+manifest list:
+#
+# List of manifests to check for configuration
+# and manifests to clone sync.
+#
+manifests = ['manifest' ]
+
+
 x Tue Jan 19 08:17:23 AKST 2016 - Parse ~/.manifest options than
 suppercede with options from manifest file in current working directory
 as needed.
