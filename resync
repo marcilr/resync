@@ -85,6 +85,16 @@ def error( str ):
    return
 
 #
+# process_cli_args()
+#
+def process_cli_args():
+    debug("process_cli_args()")
+
+
+
+    return
+
+#
 # loop_over_manifest()
 # manifest - Path to manifest files to process
 # username - Global variable set with username if found
@@ -238,6 +248,9 @@ def process_manifest():
 manifest = []
 username = ""
 password = ""
+
+# Process command line arguments
+process_cli_args()
 
 # Get manifest from manifest in working directory
 get_manifest()
