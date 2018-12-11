@@ -5,6 +5,9 @@ Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
 
 Filelist
 ========
+.gitignore
+  Files for git to ignore
+
 links.txt
   resync related links
 
