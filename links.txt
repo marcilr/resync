@@ -1,0 +1,14 @@
+links.txt
+Created Mon Dec 10 15:10:35 AST 2018
+by Raymond E. Marcil <marcilr@gmail.com>
+
+
+resync related links
+
+
+Links
+=====
+How to implement a switch-case statement in Python
+by Sreeram Sceenivasan, October 24, 2017
+https://jaxenter.com/implement-switch-case-statement-python-138315.html
+
