@@ -5,6 +5,9 @@ Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
 
 Filelist
 ========
+links.txt
+  resync related links
+
 resync
   Python script to automate the check of github hierarchical directories.
   The github directories are named with dir-subdir-subsubdir format such
