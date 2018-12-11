@@ -1,0 +1,10 @@
+#.gitignore
+# Created Mon, Dec 10, 2018  3:13:28 PM
+# by Raymond E. Marcil <marcilr@gmail.com>
+#
+# Files for git to ignore.
+#
+.gitignore
+github/
+syntax/
+test/
