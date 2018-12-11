@@ -12,3 +12,7 @@ How to implement a switch-case statement in Python
 by Sreeram Sceenivasan, October 24, 2017
 https://jaxenter.com/implement-switch-case-statement-python-138315.html
 
+How to use sys.argv in Python
+Oct. 01, 2012
+Has details of sys.argv
+https://www.pythonforbeginners.com/system/python-sys-argv
