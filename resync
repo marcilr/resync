@@ -13,9 +13,9 @@
 # git config user.email
 # marcilr@gmail.com
 #
-# 
+#
 # Thu Dec 13 13:46:52 AST 2018
-# ============================                                                                                                                                                                                                                                         
+# ============================
 # Was getting resync execution error under windows 10 enterprise:
 #
 # ──────────────────────────────────────────────────────────────
@@ -157,12 +157,12 @@ def loop_over_manifest(manifest_file):
             else:
                 new = [src,tar]
                 manifest.append(new)
-           
+
         else:
             debug("loop_over_manifest() skipping blank line or comment")
 
         if not line: continue
- 
+
     return manifest
 
 
@@ -182,7 +182,7 @@ def get_manifest():
         else:
             message = "get_manifest() No %s found, aborting." % file
             error(message)
-     
+
     return
 
 #
@@ -243,9 +243,9 @@ def process_manifest():
         #         rsa4096_github_nopassphrase.pub
         #
         #       github.com is then configued with the public key for crypto
-        #       authentication. 
+        #       authentication.
         #
-        else:   
+        else:
             debug("process_manifest() %s repo not found, cloning..." % tar);
 
             debug("process_manifest() executing: ")
@@ -256,7 +256,7 @@ def process_manifest():
             # http://stackoverflow.com/questions/89228/calling-an-external-command-in-python
             #
             from subprocess import call
-            
+
             # This works:
             #call(["/usr/bin/git", "clone", "ssh://git@github.com/marcilr/git-github.git", "github"])
             call([git, "clone", src, tar])
