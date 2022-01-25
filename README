@@ -11,6 +11,9 @@ Filelist
 links.txt
   resync related links
 
+Makefile
+  Install resync script to /usr/local/bin
+
 resync
   Python script to automate the check of github hierarchical directories.
   The github directories are named with dir-subdir-subsubdir format such
