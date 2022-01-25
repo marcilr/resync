@@ -20,7 +20,9 @@
 #
 # ──────────────────────────────────────────────────────────────
 # > resync
-# C:\Users\remarcil\AppData\Local\Programs\Python\Python37\python.exe: can't open file '/drives/c/Users/remarcil/bin/resync': [Errno 2] No such file or directory
+# C:\Users\remarcil\AppData\Local\Programs\Python\Python37\python.exe: \
+# can't open file '/drives/c/Users/remarcil/bin/resync': [Errno 2] \
+# No such file or directory
 # ──────────────────────────────────────────────────────────────
 # [2018-12-13 13:46.09]  ~/git
 # >
