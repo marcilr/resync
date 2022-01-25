@@ -15,6 +15,21 @@ Rather than:
 It would be great if the resync checkout script handled the conversion
 of the semicolon to slash automatedly.
 
+$ grep -ni src resync 
+145:            src = manifest_list[0]
+149:            if src == "username":
+150:                debug("loop_over_manifest() %s = %s " % (src, tar))
+151:                username = src
+154:                debug("loop_over_manifest() %s = *** " % src)
+158:                new = [src,tar]
+204:        src = repo[0]
+207:        debug("process_manifest() src repo: %s" % src)
+252:            debug("  git clone %s %s" % (src, tar));
+262:            call([git, "clone", src, tar])
+$
+
+The change would be made after the src variable assignment on line 204.
+
 
 +++ Thu, Nov 29, 2018  7:47:43 AM - Add recursive support to resync.
 i.e. Support sub-manifest files.
