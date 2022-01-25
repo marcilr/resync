@@ -3,6 +3,19 @@ Created Tue Jan 19 08:17:23 AKST 2016
 Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
 
 
++++ Mon 24 Jan 2022 04:14:37 PM AKST - GitHub lists repo URLs with 
+a colon rathan than a slash required for checkout.  
+
+For example:
+  git@github.com:marcilr/cariloha-bamboo.git
+
+Rather than:
+  git@github.com/marcilr/cariloha-bamboo.git
+
+It would be great if the resync checkout script handled the conversion
+of the semicolon to slash automatedly.
+
+
 +++ Thu, Nov 29, 2018  7:47:43 AM - Add recursive support to resync.
 i.e. Support sub-manifest files.
 
