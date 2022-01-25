@@ -14,6 +14,9 @@ links.txt
 Makefile
   Install resync script to /usr/local/bin
 
+manifest
+  Manifest for resync application
+
 resync
   Python script to automate the check of github hierarchical directories.
   The github directories are named with dir-subdir-subsubdir format such
