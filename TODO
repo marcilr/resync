@@ -3,6 +3,13 @@ Created Tue Jan 19 08:17:23 AKST 2016
 Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
 
 
++++ Thu 27 Jan 2022 12:07:52 PM AKST - Automatedly updated colon in repo url to slash:
+
+ssh://git@github.com:marcilr/cariloha-bamboo.git           cariloha-bamboo
+  updated to:
+ssh://git@github.com/marcilr/cariloha-bamboo.git           cariloha-bamboo
+
+
 +++ Mon 24 Jan 2022 04:14:37 PM AKST - GitHub lists repo URLs with 
 a colon rathan than a slash required for checkout.  
 
